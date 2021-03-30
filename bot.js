@@ -1,5 +1,6 @@
 console.log('Beep beeep!');
 
+require("dotenv").config();
 const  Discord = require('discord.js');
 //connection to mySQL database 
 const Sequelize = require('sequelize');
@@ -132,4 +133,5 @@ return message.reply(`Could not find tag: ${tagName}`);
 	}
 });
 
-client.login('ODI2NTE4NjM5NTA3Mjc1Nzc3.YGNpdw.pL3qdIUqIyl5r-eNG52vbJGsKVg');
+
+client.login(process.env.BOTTOKEN);
